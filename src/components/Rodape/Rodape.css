@@ -76,8 +76,14 @@ a:link, a:visited, a:active {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 430px) {
     .icones {
-        width: 40%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 414px) {
+    .icones {
+        width: 50%;
     }
 }
