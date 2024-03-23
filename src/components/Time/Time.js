@@ -10,7 +10,7 @@ export const Time = (props) => {
         ? <section 
             className='time' 
             style={{ backgroundColor: props.corFundo }}>
-            <h3 style={css}>{ props.nomeTime }</h3>
+            <h3 style={css}>{ props.nome }</h3>
             <div className='colaboradores'>
                 { props.colaboradores.map( colaborador => 
                     <Colaborador
@@ -21,6 +21,13 @@ export const Time = (props) => {
                         corFundo = { props.corIcone }
                     /> 
                 )}
+                <Colaborador 
+                    key = 'chaveAleatoriaUsarioFixoTeste'
+                    nome = 'Lucas Oliveira'
+                    cargo = 'Desenvolvedor'
+                    imagem = 'https://github.com/loliveira1945.png'
+                    corFundo = { props.corIcone }
+                />
             </div>
         </section>
         : ''

@@ -54,7 +54,7 @@ export const Formulario = (props) => {
                     label="Time" 
                     itens={ props.times }
                     obrigatorio = { true }/>
-                <Botao>Criar card</Botao>
+                <Botao>CADASTRAR</Botao>
             </form>
         </section>
     )
