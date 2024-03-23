@@ -2,7 +2,7 @@ import './Rodape.css'
 
 export const Rodape = () => {
     return (
-        <div className='rodape'>
+        <div className='rodapeApp'>
             <img src="/images/fundo.png" alt="Ícones de efeite no rodapé" className='efeito'/>
             <div className='icones'>
                 <a href='https://github.com/loliveira1945' target='_blank' rel="noreferrer">
