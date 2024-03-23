@@ -1,10 +1,10 @@
 import './Colaborador.css'
 
 //desestruturando a props, pegando apenas o que quero do objeto
-export const Colaborador = ({ nome,imagem,cargo }) => {
+export const Colaborador = ({ nome, imagem, cargo, corFundo }) => {
     return (
         <div className='colaborador'>
-            <div className='cabecalho'>
+            <div className='cabecalho' style={{backgroundColor: corFundo}}>
                 <img src= { imagem } alt= { nome }/>
             </div>
             <div className='rodape'>
