@@ -51,7 +51,7 @@ a:link, a:visited, a:active {
 }
 
 @media (max-width: 1100px) {
-    .rodape {
+    .rodapeApp {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;

@@ -23,9 +23,9 @@ export const Time = (props) => {
                 )}
                 <Colaborador 
                     key = 'chaveAleatoriaUsarioFixoTeste'
-                    nome = 'Lucas Oliveira'
-                    cargo = 'Desenvolvedor'
-                    imagem = 'https://github.com/loliveira1945.png'
+                    nome = 'Elon Musk'
+                    cargo = 'Diretor executivo da Tesla Motors'
+                    imagem = 'https://www.newegg.com/insider/wp-content/uploads/elon-musk.jpeg'
                     corFundo = { props.corIcone }
                 />
             </div>
