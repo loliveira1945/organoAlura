@@ -1,35 +1,35 @@
 import { Colaborador } from '../Colaborador/Colaborador'
 import './Time.css'
+import hexToRgba from 'hex-to-rgba';
 
-export const Time = (props) => {
+export const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar }) => {
     //posso atribuir o css dos dois jeitos
-    const css = { borderColor: props.corIcone }
+    // const css = { borderColor: time.corSecundaria }
     return (
         //renderizacao condicional
-        (props.colaboradores.length > 0) 
-        ? <section 
-            className='time' 
-            style={{ backgroundColor: props.corFundo }}>
-            <h3 style={css}>{ props.nome }</h3>
-            <div className='colaboradores'>
-                { props.colaboradores.map( colaborador => 
+        colaboradores.length > 0
+        && <section 
+                className = 'time' 
+                style = {{ backgroundImage: 'url(/images/fundo.png)', backgroundColor: hexToRgba(time.cor, '0.6') }}>
+            <input 
+                type = 'color' 
+                className = 'input-cor' 
+                value = { time.cor } 
+                onChange = {evento => {
+                    mudarCor(evento.target.value, time.nome);
+                }} />
+            <h3 style = {{ borderColor: time.cor }}>{ time.nome }</h3>
+            <div className = 'colaboradores'>
+                { colaboradores.map((colaborador, indice) => 
                     <Colaborador
-                        key = { colaborador.nome }
-                        nome = { colaborador.nome }
-                        cargo = { colaborador.cargo }
-                        imagem = { colaborador.imagem }
-                        corFundo = { props.corIcone }
+                        key = { indice }
+                        colaborador = { colaborador }
+                        corDeFundo = { time.cor }
+                        aoDeletar = { aoDeletar }
+                        aoFavoritar = { aoFavoritar }
                     /> 
                 )}
-                <Colaborador 
-                    key = 'chaveAleatoriaUsarioFixoTeste'
-                    nome = 'Elon Musk'
-                    cargo = 'Diretor executivo da Tesla Motors'
-                    imagem = 'https://www.newegg.com/insider/wp-content/uploads/elon-musk.jpeg'
-                    corFundo = { props.corIcone }
-                />
             </div>
         </section>
-        : ''
     )
 }

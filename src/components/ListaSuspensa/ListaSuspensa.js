@@ -1,17 +1,16 @@
 import './ListaSuspensa.css'
 
-export const ListaSuspensa = (props) => {
+export const ListaSuspensa = ({label, itens,  valor, aoAlteradorSelect, obrigatorio = false}) => {
     return (
         <div className='lista-suspensa'>
-            <label>{ props.label }</label>
+            <label>{ label }</label>
             <select
-                onChange =  { evento => props.aoAlteradorSelect(evento.target.value) }
-                value  = { props.valor }
-                required = { props.required 
-            }>
-                <option value=''>Selecione uma opção</option>
-                { props.itens.map(item => 
-                    <option key={item}>
+                onChange =  { evento => aoAlteradorSelect(evento.target.value) }
+                value  = { valor }
+                required = { obrigatorio } >
+                <option value = ''>Selecione uma opção</option>
+                { itens.map(item => 
+                    <option key = { item }>
                         { item }
                     </option>
                 )}
